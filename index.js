@@ -21,7 +21,7 @@ function change(result) {
     nameElement.textContent = character.name;
     const imgElement = document.createElement('img');
     imgElement.className = 'image'
-    imgElement.setAttribute('src', `/js_kimetsu_list${character.image}`);
+    imgElement.setAttribute('src', `js_kimetsu_list${character.image}`);
     const categoryElement = document.createElement('p');
     categoryElement.textContent = character.category;
     characterElement.appendChild(nameElement);
