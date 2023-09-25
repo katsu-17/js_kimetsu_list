@@ -1,0 +1,72 @@
+.container {
+  min-width: 768px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.flex {
+  display: flex;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+input {
+  vertical-align: baseline;
+}
+
+.loading {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: #fdfdfd;
+}
+
+.loading.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms;
+}
+
+.loading .circle {
+  display: block;
+  position: relative;
+  top: calc( 50% - 20px );
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 8px solid #e0e0e0;
+  border-top: 7px solid #ffcccc;
+  border-radius: 50px;
+  animation: loading 700ms linear 0ms infinite normal both;
+}
+
+@keyframes loading {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
