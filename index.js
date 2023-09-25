@@ -41,23 +41,10 @@ const loading = document.querySelector('.loading');
 fetchCharacters().then(change);
 
 const container = document.querySelector('#list');
-const allBtn = document.querySelector('#choice1');
-const kisatsutaiBtn = document.querySelector('#choice2');
-const hashiraBtn = document.querySelector('#choice3');
-const oniBtn = document.querySelector('#choice4');
 
-allBtn.addEventListener('click', () => {
-  fetchCharacters(allBtn.value).then(change);
-})
-
-kisatsutaiBtn.addEventListener('click', () => {
-  fetchCharacters(kisatsutaiBtn.value).then(change);
-})
-
-hashiraBtn.addEventListener('click', () => {
-  fetchCharacters(hashiraBtn.value).then(change);
-})
-
-oniBtn.addEventListener('click', () => {
-  fetchCharacters(oniBtn.value).then(change);
-})
+const filterButtons = document.querySelectorAll('.filterBtn');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    fetchCharacters(btn.value).then(change);
+  })
+});
